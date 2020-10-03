@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import * as firebase from 'firebase';
+import { EventEmitter } from 'protractor';
 import { Observable} from 'rxjs';
 
 @Injectable({
@@ -9,11 +10,11 @@ import { Observable} from 'rxjs';
 export class LoginService {
 
   constructor(
-    private firebaseAuth: AngularFireAuth
+    public firebaseAuth: AngularFireAuth
   ) { }
 
   public signIn(): Promise<firebase.auth.UserCredential>{
-    return this.firebaseAuth.auth.signInWithPopup(
+      return this.firebaseAuth.auth.signInWithPopup(
       new firebase.auth.GoogleAuthProvider()
     );
   }
