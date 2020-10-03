@@ -19,7 +19,7 @@ export class LoginComponent implements OnInit {
 
   signIn(): void {
     this.loginService.signIn().then(e => {
-      this.router.navigate(['home']);
+      this.router.navigate(['']);
     });
   }
 

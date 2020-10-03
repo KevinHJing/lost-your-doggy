@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { LoginService } from '../login.service';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { EventEmitter } from 'protractor';
 
 @Component({
   selector: 'app-header',
@@ -10,15 +12,22 @@ import { Observable } from 'rxjs';
 })
 export class HeaderComponent implements OnInit {
 
-  private loggedIn: Observable<firebase.User>;
-
   constructor(
     private loginService: LoginService,
     private router: Router,
   ) {}
 
   ngOnInit() {
-    this.loggedIn = this.loginService.isLoggedIn();
+  }
+
+  signOut(): void{
+    this.loginService.signOut().then(e =>{
+      this.router.navigate(['home']);
+    });
+  }
+
+  goToLoginPage(): void{
+    this.router.navigate(['login']);
   }
 
 }
