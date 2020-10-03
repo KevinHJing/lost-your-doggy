@@ -19,14 +19,12 @@
                 Found a Dog
             </a>
             <a class="navbar-item">
-                <button *ngIf="this.loginService.firebaseAuth.user | async as user; else showLogin" id="logout" (click)="signOut()">
+                <a *ngIf="loggedIn()" id="logout" href='/logout'>
                     Logout
-                </button>
-                <ng-template #showLogin>
-                    <button id="login" (click)="goToLoginPage()">
-                        Login
-                    </button>
-                </ng-template>
+                </a>
+                <a *ngIf="!loggedIn()" id="login" href='/login'>
+                    Login
+                </a>
             </a>    
         </div>
     </div>

@@ -1,9 +1,8 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../login.service';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { EventEmitter } from 'protractor';
 
 @Component({
   selector: 'app-header',
@@ -20,14 +19,17 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
-  signOut(): void{
-    this.loginService.signOut().then(e =>{
-      this.router.navigate(['home']);
-    });
-  }
-
-  goToLoginPage(): void{
-    this.router.navigate(['login']);
+  
+  loggedIn(): Observable<boolean>{
+    let status = this.loginService.isLoggedIn();
+    return status.pipe(map(user => {
+      if (user === null){
+        return false;
+      }
+      else{
+        return true;
+      }
+    }));
   }
 
 }
