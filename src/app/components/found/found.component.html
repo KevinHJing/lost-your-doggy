@@ -1,0 +1,21 @@
+<div class="found">
+
+    <input
+        style="display: none"
+        type="file" (change)="onFileChanged($event)"
+        #fileInput
+    >
+
+    <div class="buttonWrapper-1">
+        <button class="uploadButton" (click)="fileInput.click()" >UPLOAD IMAGE</button> 
+    </div>
+
+    <div class="imageWrap">
+        <img class="imgPreview"  [src]="url" > <br/>
+    </div>
+
+    <div class="buttonWrapper-2" >
+        <button class="searchButton" >SEARCH</button> 
+    </div>
+
+</div>

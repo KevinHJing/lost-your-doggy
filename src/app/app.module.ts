@@ -13,13 +13,17 @@ import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
+import { FoundComponent } from './components/found/found.component';
+import { LostComponent } from './components/lost/lost.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    LoginComponent
+    LoginComponent,
+    FoundComponent,
+    LostComponent
   ],
   imports: [
     BrowserModule,
