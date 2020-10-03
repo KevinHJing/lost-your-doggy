@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "lost-your-doggy": {
+      "hosting": {
+        "lost-your-doggy": [
+          "lost-your-doggy"
+        ]
+      }
+    }
+  }
+}

@@ -19,9 +19,15 @@
             <a class="navbar-item" href='/found'>
                 Found a Dog
             </a>
-            <a class="navbar-item" id="login" href='/login'>
-                Login
-            </a>
+            <a class="navbar-item">
+                <a *ngIf="!loggedIn" id="login" href='/login'>
+                    Login
+                </a>
+                <a *ngIf="loggedIn" id="logout" href='/logout'> 
+                    Logout
+            
+                </a>
+            </a>    
         </div>
     </div>
 </nav>

@@ -44,6 +44,7 @@ a.navbar-item:hover{
 }
 
 #login {
+    text-decoration: none;
     background-color: #A9927D;
     color: white;
     opacity: .9;
@@ -61,18 +62,21 @@ a.navbar-item:hover{
     background-color: #49111C;
 }
 
-#signup{
-    background-color: gold;
+#logout {
+    text-decoration: none;
+    background-color: #A9927D;
+    color: white;
     opacity: .9;
     font-size: 18px;
     font-weight: bold;
     padding: 10px 20px;
     margin-left: 10px;
+    margin-right: 10px;
     transition-duration: var(--transition-timer);
     border-radius: 20.5px;
 }
 
-#signup:hover{
-    color: black;
-    background-color: white;
+#logout:hover{
+    color: white;
+    background-color: #49111C;
 }

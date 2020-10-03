@@ -119,6 +119,10 @@
               "devServerTarget": "lost-your-doggy:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }
