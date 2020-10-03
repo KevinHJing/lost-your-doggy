@@ -8,7 +8,6 @@
             </a>
         </div>
 
-        <!-- hello -->
         <div class="links">
             <a class="navbar-item" href=''>
                 Home
@@ -20,12 +19,11 @@
                 Found a Dog
             </a>
             <a class="navbar-item">
-                <a *ngIf="!loggedIn" id="login" href='/login'>
-                    Login
-                </a>
-                <a *ngIf="loggedIn" id="logout" href='/logout'> 
+                <a *ngIf="loggedIn()" id="logout" href='/logout'>
                     Logout
-            
+                </a>
+                <a *ngIf="!loggedIn()" id="login" href='/login'>
+                    Login
                 </a>
             </a>    
         </div>

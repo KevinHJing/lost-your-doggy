@@ -17,7 +17,7 @@ export class AuthService implements CanActivate{
   canActivate(): Observable<boolean>{
     const status = this.loginService.isLoggedIn();
     return status.pipe(map(user => {
-      if (user == null){
+      if (user === null){
         console.log('need to log in');
         this.router.navigate(['login']);
         return false;

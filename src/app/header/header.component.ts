@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../login.service';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
@@ -10,15 +11,25 @@ import { Observable } from 'rxjs';
 })
 export class HeaderComponent implements OnInit {
 
-  private loggedIn: Observable<firebase.User>;
-
   constructor(
     private loginService: LoginService,
     private router: Router,
   ) {}
 
   ngOnInit() {
-    this.loggedIn = this.loginService.isLoggedIn();
+  }
+
+  
+  loggedIn(): Observable<boolean>{
+    let status = this.loginService.isLoggedIn();
+    return status.pipe(map(user => {
+      if (user === null){
+        return false;
+      }
+      else{
+        return true;
+      }
+    }));
   }
 
 }
