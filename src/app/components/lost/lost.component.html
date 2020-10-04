@@ -1,13 +1,41 @@
-<div class="lostCreat">
-    <input
-        style="display: none"
-        type="file" (change)="onFileSelected($event)"
-        #fileInput
-    >
 
-    <div class="buttonWrapper-1">
-        <button class="uploadButton" (click)="fileInput.click()" >UPLOAD IMAGE</button> 
+<div id="lostPage">
+    <!-- if logged in -->
+    <div *ngIf="this.loginService.firebaseAuth.user | async as user; else redirectToLogin" id="loggedIn">
+       
+        <div id ="lostForm">
+
+            <div id="lostTitle">Report a Lost Pet</div>
+
+            <input class="lostFormInput" type="text" id="name" placeholder=" Name"><br>
+            <input class="lostFormInput" type="text" id="email" placeholder=" Email"><br>
+            <input class="lostFormInput" type="number" id="phoneNum" placeholder=" Phone Num. (1234567890)"><br>
+            <input class="lostFormInput" type="number" id="zip" placeholder=" Zip Code"><br>
+            <input
+            style="display: none"
+            type="file" (change)="onFileSelected($event)"
+            #fileInput>
+            <button class="lostFormButton" id="uploadButton" (click)="fileInput.click()" >Upload Image Here!</button><br> 
+            <button class="lostFormButton" id="submitButton" type="submit" (click)="onSubmit()">Submit</button>
+        
+        </div>
+
     </div>
 
+    <!-- if logged out -->
+    <ng-template #redirectToLogin>
+        <div id="not-logged-in">
+            <div id="please-login-message">
+                <div id="message">
+                    Please Login
+                </div>
+                <div id="submessage">
+                    to Report a Lost Pet
+                </div>
+            </div>
+            <button id="toLoginPage" routerLink='/login'>
+                Login
+            </button>  
+        </div>
+    </ng-template>
 </div>
-<router-outlet> </router-outlet>

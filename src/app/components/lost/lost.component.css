@@ -1,0 +1,83 @@
+#lostPage{
+    height: 100%;
+    background-color: #A9927D;
+    vertical-align: middle;
+
+    --transition-timer: 0.3s;
+}
+
+#loggedIn{
+    height: 100%;
+    text-align: center;
+}
+
+#lostTitle{
+    font-size: 75px;
+    font-weight: bold;
+    padding-top: 65px;
+    padding-bottom: 40px;
+}
+
+input.lostFormInput{
+    width: 25%;
+    height: 40px;
+    border-radius: 20px;
+    border-color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 20px;
+}
+
+button.lostFormButton{
+    width: 20%;
+    height: 40px;
+    margin-top: 40px;
+    border-radius: 20px;
+    background-color: #49111C;
+    color: white;
+    transition-duration: var(--transition-timer);
+}
+
+button.lostFormButton:hover{
+    background-color: #5E503F;
+}
+
+#submitButton{
+    margin-top: 60px;
+}
+
+
+#not-logged-in{
+    height: 100%;
+    text-align: center;
+}
+
+#please-login-message{
+    font-size: 85px;
+}
+
+#message{
+    padding-top: 90px;
+    font-weight: bold;
+}
+
+#submessage{
+    font-size: 65px;
+    padding-top: 25px;
+}
+
+#toLoginPage{
+    background-color: #49111C;
+    color: white;
+    font-size: 35px;
+    width: 65%;
+    height: 100px;
+    margin-top: 200px;
+    border-radius: 50px;
+}
+
+#toLoginPage:hover{
+    background-color: #F2F4F3;
+    color: black;
+    transition-duration: var(--transition-timer);
+}
