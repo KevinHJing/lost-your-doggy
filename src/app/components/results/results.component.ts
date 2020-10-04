@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireStorage } from "@angular/fire/storage";
 import { AngularFirestore } from "@angular/fire/firestore";
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-results',
@@ -12,22 +13,33 @@ export class ResultsComponent implements OnInit {
   constructor(private storage: AngularFireStorage, private db: AngularFirestore) {
    }
 
+   id;
+   data;
+
+
+   async fetchData() {
+    const searchQuery = this.db.collection('userPostings', ref => ref.where('name', '==', 'Katrina').where('breed', '==', 'dog')).snapshotChanges().pipe(
+      map(actions => actions.map(a => {
+        this.id = a.payload.doc.id;
+        this.data = a.payload.doc.data;
+        return [this.id , this.data]
+      }))
+    );
+   }
+
   ngOnInit() {
 
-    const dbRef = this.db.collection('userPostings');
+    let el = <HTMLImageElement>document.getElementById("1");
+    //el.src = this.storage.openStream(this.getImage());
+  }
 
-    const searchQuery = this.db.collection('userPostings', ref => ref.where('name', '==', 'Katrina')); //go back and make better later
+  getImage(){
+    var storageRef = this.storage.ref(`lostDogPostings/images/1601798106290`);
 
-    const snapshot = searchQuery.get();
-    if (snapshot == null) {
-      console.log('No matching documents.');
-      return;
-    }  
-
-    snapshot.forEach(doc => {
-      console.log(doc[1]);
-    });
-
+    storageRef = this.storage.ref('gs://lost-your-doggy.appspot.com/lostDogPostings/').child('images/1601798106290');
+    console.log(storageRef);
+    console.log(storageRef.getDownloadURL());
+    return storageRef.getDownloadURL();
   }
 
 }
