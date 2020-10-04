@@ -1,1 +1,13 @@
-<p>lost works!</p>
+<div class="lostCreat">
+    <input
+        style="display: none"
+        type="file" (change)="onFileSelected($event)"
+        #fileInput
+    >
+
+    <div class="buttonWrapper-1">
+        <button class="uploadButton" (click)="fileInput.click()" >UPLOAD IMAGE</button> 
+    </div>
+
+</div>
+<router-outlet> </router-outlet>

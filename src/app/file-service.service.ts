@@ -4,26 +4,30 @@ import { AngularFireList, AngularFireDatabase } from '@angular/fire/database';
   providedIn: 'root'
 })
 export class FileService {
-  imageDetailList: AngularFireList<any>;
+  userDetailList: AngularFireList<any>;
   fileList: any[];
   dataSet: Data = {
     id:'',
-    url:''
+    url:'',
+    location: null,
+    contactInfo: {name: '', email: '', phone: null}
   };
   msg:string = 'error';
   constructor(@Inject(AngularFireDatabase) private firebase: AngularFireDatabase) { }
-  getImageDetailList() {
-    this.imageDetailList = this.firebase.list('imageDetails');
+  getUserDetailList() {
+    this.userDetailList = this.firebase.list('userDetails');
   }
-  insertImageDetails(id,url) {
+  insertUserDetails(id, url, location, contact) {
     this.dataSet = {
       id : id,
-      url: url
+      url: url,
+      location: location,
+      contactInfo : { name: contact.name, phone: contact.email, email: contact.phone}
     };
-    this.imageDetailList.push(this.dataSet);
+    this.userDetailList.push(this.dataSet);
   }
   getImage(value){
-    this.imageDetailList.snapshotChanges().subscribe(
+    this.userDetailList.snapshotChanges().subscribe(
       list => {
         this.fileList = list.map(item => { return item.payload.val();  });
         this.fileList.forEach(element => {
@@ -43,4 +47,6 @@ export class FileService {
 export interface Data{
   id:string;
   url:string;
+  location:number;
+  contactInfo: {name: string, email:string, phone: number};
 }

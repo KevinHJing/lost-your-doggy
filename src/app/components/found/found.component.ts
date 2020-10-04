@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { finalize } from "rxjs/operators";
-import { FileService } from '../../file-service.service';
 
 @Component({
   selector: 'app-found',

@@ -4,6 +4,12 @@ import { NgModule } from '@angular/core';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule} from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import {
+  AngularFireStorageModule,
+  AngularFireStorageReference,
+  AngularFireUploadTask,
+  StorageBucket
+} from "@angular/fire/storage";
 
 import { environment } from '../environments/environment';
 
@@ -36,6 +42,8 @@ import { ResultsComponent } from './components/results/results.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     AngularFireAuthModule,
+    AngularFireStorageModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig, "cloud")
   ],
   providers: [],
   bootstrap: [AppComponent]
