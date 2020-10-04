@@ -28,12 +28,14 @@ div.buttonWrapper-2{
 }
 
 button.uploadButton, button.searchButton {
-    color: black;
+    background-color: #49111C;
+    color: white;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 20px;
 
     width: 200px;
     height: 50px;
+    border-radius: 25px;
 
     margin: auto;
 }

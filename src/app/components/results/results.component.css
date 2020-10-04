@@ -1,8 +1,11 @@
 .result {
     border: 5px solid black;
+    display: flex;
+    flex-direction: column;
 
     background-color: rgb(92,81,65);
     color: white;
+    text-align: center;
 
     height: 400px;
     width: 400px;
@@ -14,4 +17,30 @@
     flex-direction: row;
 
     width: 100%;
+}
+
+.imgTile {
+    margin: auto;
+    padding: 15px;
+
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.contactMe {
+    text-decoration: none;
+    background-color: #49111C;
+    color: white;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    padding: 10px 20px;
+    border-radius: 20px;
+    height: 50px;
+    width: 150px;
+
+    text-align: center;
+    margin: auto;
+    margin-bottom: 40px;
 }
