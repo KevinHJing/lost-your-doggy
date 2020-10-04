@@ -18,6 +18,7 @@ import { FooterComponent } from './footer/footer.component';
 import { FoundComponent } from './components/found/found.component';
 import { LostComponent } from './components/lost/lost.component';
 import { ResultsComponent } from './components/results/results.component';
+import { ProcessingComponent } from './processing/processing.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ResultsComponent } from './components/results/results.component';
     FooterComponent,
     FoundComponent,
     LostComponent,
-    ResultsComponent
+    ResultsComponent,
+    ProcessingComponent
   ],
   imports: [
     BrowserModule,
