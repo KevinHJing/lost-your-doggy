@@ -28,6 +28,7 @@ a.placeholder{
 
 div.links{
     float: right;
+    height: 65px;
 }
 
 a.navbar-item{
