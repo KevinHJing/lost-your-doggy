@@ -65,7 +65,7 @@ a.navbar-item:hover{
 
 #logout {
     text-decoration: none;
-    background-color: #A9927D;
+    background-color: #49111C;
     color: white;
     opacity: .9;
     font-size: 18px;
@@ -79,5 +79,5 @@ a.navbar-item:hover{
 
 #logout:hover{
     color: white;
-    background-color: #49111C;
+    background-color: #A9927D;
 }
