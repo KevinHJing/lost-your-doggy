@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { AuthService } from './auth.service';
 import { FoundComponent } from './components/found/found.component';
 import { LostComponent } from './components/lost/lost.component';
+import { ResultsComponent } from './components/results/results.component';
 
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'found', component: FoundComponent},
   {path: 'lost', component: LostComponent},
+  {path: 'results', component: ResultsComponent},
   {path: '**', redirectTo: 'home'}
 ];
 

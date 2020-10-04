@@ -15,6 +15,7 @@ import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 import { FoundComponent } from './components/found/found.component';
 import { LostComponent } from './components/lost/lost.component';
+import { ResultsComponent } from './components/results/results.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { LostComponent } from './components/lost/lost.component';
     HeaderComponent,
     LoginComponent,
     FoundComponent,
-    LostComponent
+    LostComponent,
+    ResultsComponent
   ],
   imports: [
     BrowserModule,
