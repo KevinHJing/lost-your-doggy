@@ -24,6 +24,7 @@
     "@angular/router": "~8.2.13",
     "component": "^1.1.0",
     "firebase": ">= 5.5.7 <8",
+    "firebase-admin": "^9.2.0",
     "rxjs": "~6.4.0",
     "service": "^0.1.4",
     "tslib": "^1.10.0",

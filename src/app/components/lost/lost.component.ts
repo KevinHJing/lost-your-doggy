@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireStorage } from "@angular/fire/storage";
-import { finalize } from "rxjs/operators";
-import { Observable } from "rxjs";
-import { FileService } from '../../file-service.service';
-import { writeFile } from 'fs';
+import { AngularFirestore } from "@angular/fire/firestore";
 
 @Component({
   selector: 'app-lost',
   templateUrl: './lost.component.html',
   styleUrls: ['./lost.component.css']
 })
+
+
 
 export class LostComponent implements OnInit {
 
@@ -20,25 +19,33 @@ export class LostComponent implements OnInit {
   location: number;
   contactInfo: {name: string, email:string, phone: number}
 
-  constructor(private storage: AngularFireStorage) {}
-  ngOnInit() {}
+  constructor(private storage: AngularFireStorage, private db: AngularFirestore) {}
+  ngOnInit() {  }
+
+
   onFileSelected(event) {
+
+
+    this.location = 123;
+    this.contactInfo = {name : "Katrina", email: "helloworld", phone: 123456};
 
     //save the image
     var n = Date.now();
     const file = event.target.files[0];
-    const task = this.storage.upload(`lostDogPostings/${n}/image`, file);
+    const task = this.storage.upload(`lostDogPostings/images/${n}`, file);
 
     //create user profile data file, replace with input data later
-    let docData = 
-      '\r Name: ' + "Katrina" + ' \r\n ' + 
-          'Phone: ' + 1234567890 + ' \r\n ' + 
-          'Email: ' + "helloworld";
-      
-    var blob = new Blob([docData], {type: "text/plain"});
-    const sFileName = 'formData.txt';	   // The file to save the data.
+    let docData = {
+      id: Date.now(),
+      location: this.location,
+      name: this.contactInfo.name,
+      email: this.contactInfo.email,
+      phone: this.contactInfo.phone
+    }
 
-    this.storage.upload(`lostDogPostings/${n}/postingInfo`, <File>blob);
+    this.db.collection('userPostings').doc('${id}').set(docData).then(function() {
+      console.log("Document successfully written!");
+    });
   }
 
 }
