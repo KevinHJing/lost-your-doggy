@@ -1,7 +1,8 @@
 nav.navbar{
-    height: 65px;
+    height: 70px;
     width: 100%;
     background-color: #F2F4F3;
+    border-bottom: 2px solid black; 
     
     /* variables */
     --transition-timer: 0.3s
