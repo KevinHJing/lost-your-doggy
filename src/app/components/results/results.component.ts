@@ -15,6 +15,7 @@ export class ResultsComponent implements OnInit {
 
    id;
    data;
+   url;
 
 
    async fetchData() {
