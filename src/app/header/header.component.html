@@ -13,10 +13,10 @@
                 Home
             </a>
             <a class="navbar-item" routerLink='/lost'>
-                Lost a Dog
+                Lost a Pet
             </a>
             <a class="navbar-item" routerLink='/found'>
-                Found a Dog
+                Found a Pet
             </a>
             <a class="navbar-item">
                 <button *ngIf="this.loginService.firebaseAuth.user | async as user; else showLogin" id="logout" (click)="signOut()">
