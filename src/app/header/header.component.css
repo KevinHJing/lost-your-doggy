@@ -13,9 +13,10 @@ nav.navbar{
     line-height: 65px;
 }
 
-#logo{
+div#logo{
     vertical-align: middle;
     float: left;
+    line-height: 65px;
 }
 
 a.placeholder{
@@ -45,7 +46,7 @@ a.navbar-item:hover{
 
 #login {
     text-decoration: none;
-    background-color: #A9927D;
+    background-color: #49111C;
     color: white;
     opacity: .9;
     font-size: 18px;
@@ -59,7 +60,7 @@ a.navbar-item:hover{
 
 #login:hover{
     color: white;
-    background-color: #49111C;
+    background-color: #A9927D;
 }
 
 #logout {

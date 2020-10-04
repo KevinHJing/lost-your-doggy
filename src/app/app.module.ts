@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
+import { FooterComponent } from './footer/footer.component';
 import { FoundComponent } from './components/found/found.component';
 import { LostComponent } from './components/lost/lost.component';
 import { ResultsComponent } from './components/results/results.component';
@@ -23,6 +24,7 @@ import { ResultsComponent } from './components/results/results.component';
     HomeComponent,
     HeaderComponent,
     LoginComponent,
+    FooterComponent,
     FoundComponent,
     LostComponent,
     ResultsComponent

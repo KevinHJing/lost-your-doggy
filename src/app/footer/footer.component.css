@@ -1,0 +1,22 @@
+div{
+    --footer-height: 120px;
+}
+
+#footerBody{
+    margin: 0px;
+    width: 100%;
+    height: var(--footer-height);
+    line-height: var(--footer-height);
+    background-color: #0A0908;
+    text-align: center;
+}
+
+#footerText{
+    margin: auto;
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 2;
+    display: inline-block;
+    vertical-align: middle;
+}
