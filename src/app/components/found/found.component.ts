@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireStorage } from '@angular/fire/storage';
+import { finalize } from "rxjs/operators";
+import { FileService } from '../../file-service.service';
 
 @Component({
   selector: 'app-found',
@@ -30,7 +33,6 @@ export class FoundComponent implements OnInit {
 
   onSearch(event){
     //this is where we determine what search results will be or set the image as some passed on var
-    //this.afStorage.upload('/upload/to/this-path', this.file);
   }
 
 }

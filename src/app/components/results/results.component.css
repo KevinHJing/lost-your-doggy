@@ -1,6 +1,17 @@
 .result {
     border: 5px solid black;
-    height: 200px;
-    width: 200px;
+
+    background-color: rgb(92,81,65);
+    color: white;
+
+    height: 400px;
+    width: 400px;
     margin: 50px;
+}
+
+.rowResult {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
 }
