@@ -23,7 +23,7 @@ import { LostComponent } from './components/lost/lost.component';
     HomeComponent,
     HeaderComponent,
     LoginComponent,
-    FooterComponent
+    FooterComponent,
     FoundComponent,
     LostComponent
   ],
