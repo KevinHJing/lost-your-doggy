@@ -22,6 +22,7 @@ export class FoundComponent implements OnInit {
       reader.onload = (event) => { // called once readAsDataURL is completed
         this.url = reader.result;
       }
+      document.getElementById("test").style.display = 'block';
     }
   }
 
