@@ -30,7 +30,13 @@ export class ResultsComponent implements OnInit {
   ngOnInit() {
 
     let el = <HTMLImageElement>document.getElementById("1");
-    //el.src = this.storage.openStream(this.getImage());
+    el.src = "https://www.muglestonspitbullfarm.com/asccustompages/uploadedfiles/dbadminfiles/20190603_142456-swDQH-YEGJm-orqkx.jpg"
+
+    let el2 = <HTMLImageElement>document.getElementById("2");
+    el2.src = "https://i.pinimg.com/originals/a1/93/14/a19314e419d1e831fe826a9d3c1c2b0c.jpg"
+
+    let el3 = <HTMLImageElement>document.getElementById("3");
+    el3.src = "https://i.pinimg.com/originals/90/32/e8/9032e8cad7432fa67d2ccc8eff429ede.jpg"
   }
 
   getImage(){
