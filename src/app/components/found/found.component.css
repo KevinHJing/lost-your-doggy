@@ -1,0 +1,55 @@
+div.found {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+div.buttonWrapper-1{
+    padding: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 25%;
+    margin-left: 0%;
+}
+div.buttonWrapper-2{
+    padding: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 25%;
+    margin-right: 0%;
+}
+
+button.uploadButton, button.searchButton {
+    color: black;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 20px;
+
+    width: 200px;
+    height: 50px;
+
+    margin: auto;
+}
+
+.imgPreview {
+    padding-top: 20px;
+    max-width: 75%;
+    max-height: 75%;
+}
+
+.imageWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+
+    margin: auto;
+    height: 100%;
+}

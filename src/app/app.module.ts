@@ -14,6 +14,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 import { FooterComponent } from './footer/footer.component';
+import { FoundComponent } from './components/found/found.component';
+import { LostComponent } from './components/lost/lost.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { FooterComponent } from './footer/footer.component';
     HeaderComponent,
     LoginComponent,
     FooterComponent
+    FoundComponent,
+    LostComponent
   ],
   imports: [
     BrowserModule,
