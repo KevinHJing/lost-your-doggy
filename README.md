@@ -16,7 +16,7 @@ Losing a family pet can be devastating. So, to help people through these tramati
 
 ## Tech Stack
 
-- [Kaggle Dataset - Dog Breeds](https://www.kaggle.com/jessicali9530/stanford-dogs-dataset)
+- Kaggle Dataset - [Dog Breeds](https://www.kaggle.com/jessicali9530/stanford-dogs-dataset)
 - Google Cloud
     - [Firestore](https://cloud.google.com/firestore)
     - [Firebase](https://firebase.google.com/)
