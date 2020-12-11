@@ -14,6 +14,15 @@ Losing a family pet can be devastating. So, to help people through these tramati
 - Katrina Baniak
     - [LinkedIn](https://www.linkedin.com/in/katrina-baniak/), [GitHub](https://github.com/kabaniak)
 
+## Tech Stack
+
+- [Kaggle Dataset - Dog Breeds](https://www.kaggle.com/jessicali9530/stanford-dogs-dataset)
+- Google Cloud
+    - [Firestore](https://cloud.google.com/firestore)
+    - [Firebase](https://firebase.google.com/)
+        - [AutoML Vision Edge](https://firebase.google.com/docs/ml/automl-image-labeling)
+- [Angular](https://angular.io/)
+
 # Usage
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.17.
