@@ -8,7 +8,7 @@ Losing a family pet can be devastating. So, to help people through these tramati
 ## Contributors
 
 - Kevin Jing
-    - [LinkedIn](https://www.linkedin.com/in/kevinjing/), [GitHub](https://github.com/kevjing/)
+    - [LinkedIn](https://www.linkedin.com/in/kevinjing/), [GitHub](https://github.com/kevinhjing/)
 - Shashank Bhatt
     - [GitHub](https://github.com/ssbhatt4321)
 - Katrina Baniak
